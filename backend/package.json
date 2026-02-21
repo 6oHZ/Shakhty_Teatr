@@ -1,0 +1,25 @@
+{
+  "name": "shakhty_teatr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/6oHZ/Shakhty_Teatr.git"
+  },
+  "private": true,
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "tsoa": "^7.0.0-alpha.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0"
+  }
+
+}
