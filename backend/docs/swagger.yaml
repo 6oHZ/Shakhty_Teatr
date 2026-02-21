@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  title: Theater API
+  version: 1.0.0
+  description: API для управления спектаклями театра
+
+paths:
+  /plays:
+    get:
+      summary: Получить список всех спектаклей
+      tags:
+        - Plays
+      responses:
+        '200':
+          description: Успешный возврат списка
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Play'
+
+components:
+  schemas:
+    Play:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        genre:
+          type: string
+        director:
+          type: string
+        description:
+          type: string
+        duration:
+          type: string
+        ageLimit:
+          type: string
