@@ -8,12 +8,12 @@ generator client {
 
 model Play {
   id          Int      @id @default(autoincrement())
-  title       String   // Название (например, "ИГРОКИ")
-  genre       String?  // Описание жанра под названием
-  director    String?  // Режиссер
-  description String?  @db.Text // Большое описание спектакля
-  duration    String?  // Длительность (например, "1 ч. 40 мин.")
-  ageLimit    String?  // Возрастной ценз (например, "12+")
+  title       String
+  genre       String?
+  director    String?
+  description String?  @db.Text
+  duration    String?
+  ageLimit    String?
   createdAt   DateTime @default(now())
 }
 
