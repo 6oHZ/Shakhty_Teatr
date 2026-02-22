@@ -1,9 +1,10 @@
-datasource db {
-  provider = "postgresql"
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
 }
 
-generator client {
-  provider = "prisma-client-js"
+datasource db {
+  provider = "postgresql"
 }
 
 model Play {
@@ -18,8 +19,8 @@ model Play {
 }
 
 model Admins {
-  id          Int     @id @default(autoincrement())
-  login       String
-  password    String
-  createdAt   DateTime  @default(now())
+  id        Int      @id @default(autoincrement())
+  login     String
+  password  String
+  createdAt DateTime @default(now())
 }
