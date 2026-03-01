@@ -24,3 +24,11 @@ model Admins {
   password  String
   createdAt DateTime @default(now())
 }
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    Int
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+}
